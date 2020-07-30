@@ -71,13 +71,6 @@ const SOUND_EFFECTS = {
 }
 
 function loadSounds() {
-  Audio.setAudioModeAsync({
-    playsInSilentModeIOS: false,
-    allowsRecordingIOS: false,
-    interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX,
-    interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX,
-  })
-
   SOUND_EFFECTS[ESoundEffect.MUSIC]
     .loadAsync(require("../../assets/sfx/music.mp3"))
     .then(() => {

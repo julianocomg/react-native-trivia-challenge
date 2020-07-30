@@ -1,5 +1,5 @@
 import * as React from "react"
-import styled from "styled-components/native"
+import styled, { useTheme } from "styled-components/native"
 import { Ionicons } from "@expo/vector-icons"
 import { Button } from "./button"
 
@@ -8,9 +8,11 @@ export const ErrorMessage: React.FC<IErrorMessage> = ({
   message,
   onTryAgain,
 }) => {
+  const theme = useTheme()
+
   return (
     <Container>
-      <Ionicons name="md-sad" size={160} />
+      <Ionicons name="md-sad" size={160} color={theme.primaryTextColor} />
 
       <Title>{title}</Title>
       <Message>{message}</Message>

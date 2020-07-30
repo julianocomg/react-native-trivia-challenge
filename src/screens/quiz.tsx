@@ -230,7 +230,7 @@ const QuestionCardContainer = styled.View`
 `
 
 const QuestionCardText = styled.Text`
-  font-size: 22px;
+  font-size: 20px;
   line-height: 34px;
   color: ${props => props.theme.questionCardTextColor};
   text-align: center;
